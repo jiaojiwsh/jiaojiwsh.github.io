@@ -25,12 +25,12 @@
 
   
 
-<link rel="canonical" href="http://example.com/2023/03/07/Vue-CLI%E5%88%9D%E5%A7%8B%E5%8C%96%E8%84%9A%E6%89%8B%E6%9E%B6/">
+<link rel="canonical" href="http://example.com/2023/03/16/Hexo%E5%9B%BE%E7%89%87%E6%8F%92%E5%85%A5%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BA%E9%97%AE%E9%A2%98/">
 
 
 
   <title>
-Vue CLI初始化脚手架 |
+Hexo图片插入无法显示问题 |
 Yume Shoka = Hexo</title>
 <meta name="generator" content="Hexo 5.4.2"></head>
 <body itemscope itemtype="http://schema.org/WebPage">
@@ -58,16 +58,16 @@ Yume Shoka = Hexo</title>
         <div id="brand">
           <div class="pjax">
           
-  <h1 itemprop="name headline">Vue CLI初始化脚手架
+  <h1 itemprop="name headline">Hexo图片插入无法显示问题
   </h1>
   
 <div class="meta">
-  <span class="item" title="Created: 2023-03-07 20:47:45">
+  <span class="item" title="Created: 2023-03-16 22:17:09">
     <span class="icon">
       <i class="ic i-calendar"></i>
     </span>
     <span class="text">Posted on</span>
-    <time itemprop="dateCreated datePublished" datetime="2023-03-07T20:47:45+08:00">2023-03-07</time>
+    <time itemprop="dateCreated datePublished" datetime="2023-03-16T22:17:09+08:00">2023-03-16</time>
   </span>
 </div>
 
@@ -100,12 +100,12 @@ Yume Shoka = Hexo</title>
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gipevo9j1jj20zk0m8e81.jpg"></li>
-          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giciuv0socj20zk0m8qes.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giciszlczyj20zk0m816d.jpg"></li>
           <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giclh3brzpj20zk0m8ann.jpg"></li>
-          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gipewr8iypj20zk0m8b29.jpg"></li>
-          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gipewf5l51j20zk0m8b29.jpg"></li>
-          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gipew28b65j20zk0m8hdt.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gipeuv80yoj20zk0m8kjl.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gicli3sbvtj20zk0m8x6p.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giclfdu6exj20zk0m87hw.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giclh0m9pdj20zk0m8hdt.jpg"></li>
         </ul>
       </div>
     </header>
@@ -134,7 +134,7 @@ Yume Shoka = Hexo</title>
 </div>
 
     <article itemscope itemtype="http://schema.org/Article" class="post block" lang="en">
-  <link itemprop="mainEntityOfPage" href="http://example.com/2023/03/07/Vue-CLI%E5%88%9D%E5%A7%8B%E5%8C%96%E8%84%9A%E6%89%8B%E6%9E%B6/">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2023/03/16/Hexo%E5%9B%BE%E7%89%87%E6%8F%92%E5%85%A5%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BA%E9%97%AE%E9%A2%98/">
 
   <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="image" content="/images/avatar.jpg">
@@ -149,40 +149,39 @@ Yume Shoka = Hexo</title>
   <div class="body md" itemprop="articleBody">
     
 
-    <p><strong>初始化脚手架</strong></p>
-<h1 id="1说明"><a class="markdownIt-Anchor" href="#1说明">#</a> 1. 说明</h1>
+    <h1 id="问题描述"><a class="markdownIt-Anchor" href="#问题描述">#</a> 问题描述</h1>
+<p><strong>用 hexo+typora 写博客时面临一个图片显示的问题</strong></p>
+<p><strong>md 文件中插入图片，md 的语法为</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![]()</span><br></pre></td></tr></table></figure>
 <ol>
-<li>Vue 脚手架是 Vue 官方提供的标准化开发工具（开发平台）</li>
-<li>最新版本是 4.x</li>
+<li>[] 里写图片文件的描述</li>
+<li>（）里写图片的 src（可以是网络地址，也可以是本地的绝对或相对路径）</li>
 </ol>
-<h1 id="2具体步骤"><a class="markdownIt-Anchor" href="#2具体步骤">#</a> 2. 具体步骤</h1>
-<ol>
-<li>如果下载缓慢请配置 npm 淘宝镜像 <code>npm config set registry http://registry.npm.taobao.org</code></li>
-<li>全局安装 @vue/cli   <code>npm install -g @vue/cli</code></li>
-<li>切换到创建项目的目录，使用命令创建项目 <code>vue create xxx</code></li>
-<li>选择使用 vue 的版本</li>
-<li>启动项目 <code>npm run serve</code></li>
-<li>打包项目 <code>npm run build</code></li>
-<li>暂停项目 <code>Ctrl+c</code></li>
-</ol>
-<p>vue 脚手架隐藏了所有 webpack 相关的配置，若想查看具体的 webpack 配置，请执行 vue inspect &gt; output.js</p>
-<h1 id="3脚手架文件结构"><a class="markdownIt-Anchor" href="#3脚手架文件结构">#</a> 3. 脚手架文件结构</h1>
-<img data-src="/2023/03/07/Vue-CLI%E5%88%9D%E5%A7%8B%E5%8C%96%E8%84%9A%E6%89%8B%E6%9E%B6/img1.png" class title="This is an image">
-<h1 id="4关于不同版本的函数"><a class="markdownIt-Anchor" href="#4关于不同版本的函数">#</a> 4. 关于不同版本的函数</h1>
+<p>为了图片的统一管理，我们会在 myblog-&gt;source 文件下建立个 img 文件夹，图片放在这个文件夹里，在编写博客文章的时候通过相对路径引用。</p>
+<p>通过 hexo 发布服务后我们能在文章中正确浏览到该图片，但是在博客的主页中却看不到图片。</p>
+<p>在 hexo 的官方文档中有说明：</p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL3poLWNuL2RvY3MvYXNzZXQtZm9sZGVycw==">资源文件夹</span></p>
+<img data-src="/2023/03/16/Hexo%E5%9B%BE%E7%89%87%E6%8F%92%E5%85%A5%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BA%E9%97%AE%E9%A2%98/img.png" class title="This is an image">
+<h1 id="解决方法"><a class="markdownIt-Anchor" href="#解决方法">#</a> 解决方法</h1>
 <ol>
 <li>
-<p>vue.js 与 vue.runtime.xxx.js 的区别</p>
-<p>a. vue.js 是完整版的 vue，包含：核心功能 + 模板解析器</p>
-<p>b. vue.runtime.xxx.js 是运行版，只包含核心功能，没有模板解析器</p>
+<p>将  <code>config.yml</code>  文件中的  <code>post_asset_folder</code>  选项设为  <code>true</code>  来打开。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">post_asset_folder: true</span><br></pre></td></tr></table></figure>
+<p>当资源文件管理功能打开后，Hexo 将会在你每一次通过  <code>hexo new [layout] &lt;title&gt;</code>  命令创建新文章时自动创建一个文件夹。这个资源文件夹将会有与这个文章文件一样的名字。将所有与你的文章有关的资源放在这个关联文件夹中之后，你可以通过相对路径来引用它们，这样你就得到了一个更简单而且方便得多的工作流。</p>
 </li>
 <li>
-<p>因为 vue.runtime.xxx.js 没有模板解析器，所有不能使用 template 配置项，需要使用 render 函数接收到的 createElement 函数去指定具体内容</p>
+<p>相对路径引用的标签插件</p>
+<p>当你打开文章资源文件夹功能后，你把一个  <code>example.jpg</code>  图片放在了你的资源文件夹中，如果通过使用相对路径的常规 markdown 语法  <code>![](example.jpg)</code>  ，它将 <em>不会</em> 出现在首页上。（但是它会在文章中按你期待的方式工作）</p>
+<p>正确的引用图片方式是使用下列的标签插件而不是 markdown ：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% asset_img example.jpg This is an example image %&#125;</span><br></pre></td></tr></table></figure>
+<p>把 example.jpg 替换掉自己的图片名字（后面的提示随便写）并保存</p>
+<p>这个时候 typora 中是不展示图片的 记住 *<strong>typora 中是不展示图片的 *</strong></p>
+<p>得通过 hexo 发布成服务后 通过网页才能展示。</p>
+<p>ps：如果有同名的文件夹。typora 中通过如下设置插入图片的时候会自动将图片存入到同名的文件夹中</p>
+<p>（如果是之前 md 文件没有同名文件的话，手动建立一个就好，然后把图片放在那个同名文件夹里。然后再用官方解决方法的标签语法写一遍就好了。）</p>
+<img data-src="/2023/03/16/Hexo%E5%9B%BE%E7%89%87%E6%8F%92%E5%85%A5%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BA%E9%97%AE%E9%A2%98/img1.png" class title="This is an image">
 </li>
 </ol>
-<h1 id="5vueconfigjs配置文件"><a class="markdownIt-Anchor" href="#5vueconfigjs配置文件">#</a> 5.vue.config.js 配置文件</h1>
-<p>vue  inspect  &gt;  output.js 可以查看 Vue 脚手架的默认配置，使用 vue.config.js 可以对脚手架进行个性化定制，和 package.json 同级目录，</p>
-<p>[<span class="exturl" data-url="aHR0cHM6Ly9jbGkudnVlanMub3JnL3poL2NvbmZpZy8jdnVlLWNvbmZpZy1qcyVFOCVBRiVBNiVFOCVBNyU4MSVFOSU4NSU4RCVFNyVCRCVBRSVFOSVBMSVCOSU3Q1Z1ZUNMSQ==">https://cli.vuejs.org/zh/config/#vue-config-js 详见配置项 | VueCLI</span>]:</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = <span class="title function_">defineConfig</span>(&#123;</span><br><span class="line">  <span class="attr">transpileDependencies</span>: <span class="literal">true</span>,</span><br><span class="line">  <span class="comment">// 关闭语法检查</span></span><br><span class="line">  <span class="attr">lintOnSave</span>:<span class="literal">false</span></span><br><span class="line">&#125;)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
   </div>
 
@@ -194,7 +193,7 @@ Yume Shoka = Hexo</title>
       <i class="ic i-calendar-check"></i>
     </span>
     <span class="text">Edited on</span>
-    <time title="Modified: 2023-03-16 22:06:13" itemprop="dateModified" datetime="2023-03-16T22:06:13+08:00">2023-03-16</time>
+    <time title="Modified: 2023-03-16 22:47:25" itemprop="dateModified" datetime="2023-03-16T22:47:25+08:00">2023-03-16</time>
   </span>
 </div>
 
@@ -230,7 +229,7 @@ Yume Shoka = Hexo</title>
   </li>
   <li class="link">
     <strong>Post link: </strong>
-    <a href="http://example.com/2023/03/07/Vue-CLI%E5%88%9D%E5%A7%8B%E5%8C%96%E8%84%9A%E6%89%8B%E6%9E%B6/" title="Vue CLI初始化脚手架">http://example.com/2023/03/07/Vue-CLI初始化脚手架/</a>
+    <a href="http://example.com/2023/03/16/Hexo%E5%9B%BE%E7%89%87%E6%8F%92%E5%85%A5%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BA%E9%97%AE%E9%A2%98/" title="Hexo图片插入无法显示问题">http://example.com/2023/03/16/Hexo图片插入无法显示问题/</a>
   </li>
   <li class="license">
     <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> unless stating additionally.
@@ -247,14 +246,22 @@ Yume Shoka = Hexo</title>
 
 <div class="post-nav">
     <div class="item left">
+      
+
+  <a href="/2023/03/16/Vue%E7%9A%84%E4%BB%8B%E7%BB%8D%E5%92%8C%E4%BD%BF%E7%94%A8/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giclhtuo6nj20zk0m8ttm.jpg" title="Vue的介绍和使用">
+  <span class="type">Previous Post</span>
+  <span class="category"><i class="ic i-flag"></i> </span>
+  <h3>Vue的介绍和使用</h3>
+  </a>
+
     </div>
     <div class="item right">
       
 
-  <a href="/2023/03/07/Vue%E6%A0%B8%E5%BF%83%E5%86%85%E5%AE%B9/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giclhtuo6nj20zk0m8ttm.jpg" title="Vue核心内容">
+  <a href="/2023/03/16/hello-world/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gipetfk5zwj20zk0m8e81.jpg" title="Hello World">
   <span class="type">Next Post</span>
   <span class="category"><i class="ic i-flag"></i> </span>
-  <h3>Vue核心内容</h3>
+  <h3>Hello World</h3>
   </a>
 
     </div>
@@ -273,7 +280,7 @@ Yume Shoka = Hexo</title>
   <div class="panels">
     <div class="inner">
       <div class="contents panel pjax" data-title="Contents">
-          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1%E8%AF%B4%E6%98%8E"><span class="toc-number">1.</span> <span class="toc-text"> 1. 说明</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2%E5%85%B7%E4%BD%93%E6%AD%A5%E9%AA%A4"><span class="toc-number">2.</span> <span class="toc-text"> 2. 具体步骤</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3%E8%84%9A%E6%89%8B%E6%9E%B6%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84"><span class="toc-number">3.</span> <span class="toc-text"> 3. 脚手架文件结构</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4%E5%85%B3%E4%BA%8E%E4%B8%8D%E5%90%8C%E7%89%88%E6%9C%AC%E7%9A%84%E5%87%BD%E6%95%B0"><span class="toc-number">4.</span> <span class="toc-text"> 4. 关于不同版本的函数</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5vueconfigjs%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="toc-number">5.</span> <span class="toc-text"> 5.vue.config.js 配置文件</span></a></li></ol>
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0"><span class="toc-number">1.</span> <span class="toc-text"> 问题描述</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95"><span class="toc-number">2.</span> <span class="toc-text"> 解决方法</span></a></li></ol>
       </div>
       <div class="related panel pjax" data-title="Related">
       </div>
@@ -313,10 +320,12 @@ Yume Shoka = Hexo</title>
 
   <ul id="quick">
     <li class="prev pjax">
+        <a href="/2023/03/16/Vue%E7%9A%84%E4%BB%8B%E7%BB%8D%E5%92%8C%E4%BD%BF%E7%94%A8/" rel="prev" title="Previous Post"><i class="ic i-chevron-left"></i></a>
     </li>
     <li class="up"><i class="ic i-arrow-up"></i></li>
     <li class="down"><i class="ic i-arrow-down"></i></li>
     <li class="next pjax">
+        <a href="/2023/03/16/hello-world/" rel="next" title="Next Post"><i class="ic i-chevron-right"></i></a>
     </li>
     <li class="percent"></li>
   </ul>
@@ -349,7 +358,7 @@ Yume Shoka = Hexo</title>
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2023/03/16/hello-world/" title="Hello World">Hello World</a></span>
+    <span><a href="/2023/03/16/Vue%E7%9A%84%E4%BB%8B%E7%BB%8D%E5%92%8C%E4%BD%BF%E7%94%A8/" title="Vue的介绍和使用">Vue的介绍和使用</a></span>
   </li>
 
       
@@ -358,7 +367,7 @@ Yume Shoka = Hexo</title>
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2023/03/07/Vue%E6%A0%B8%E5%BF%83%E5%86%85%E5%AE%B9/" title="Vue核心内容">Vue核心内容</a></span>
+    <span><a href="/2023/03/16/hello-world/" title="Hello World">Hello World</a></span>
   </li>
 
       
@@ -376,7 +385,7 @@ Yume Shoka = Hexo</title>
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2023/03/16/Vue%E7%9A%84%E4%BB%8B%E7%BB%8D%E5%92%8C%E4%BD%BF%E7%94%A8/" title="Vue的介绍和使用">Vue的介绍和使用</a></span>
+    <span><a href="/2023/03/07/Vue%E6%A0%B8%E5%BF%83%E5%86%85%E5%AE%B9/" title="Vue核心内容">Vue核心内容</a></span>
   </li>
 
   </ul>
@@ -407,7 +416,7 @@ Yume Shoka = Hexo</title>
   </div>
 <script data-config type="text/javascript">
   var LOCAL = {
-    path: '2023/03/07/Vue-CLI初始化脚手架/',
+    path: '2023/03/16/Hexo图片插入无法显示问题/',
     favicon: {
       show: "（●´3｀●）Goooood",
       hide: "(´Д｀)Booooom"
