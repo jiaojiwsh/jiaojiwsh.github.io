@@ -1,0 +1,680 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="Hexo" href="http://example.com/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="Hexo" href="http://example.com/atom.xml" />
+<link rel="alternate" type="application/json" title="Hexo" href="http://example.com/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+
+<link rel="canonical" href="http://example.com/2023/03/27/vue3%E5%AD%A6%E4%B9%A0/">
+
+
+
+  <title>
+vue3学习 |
+Yume Shoka = Hexo</title>
+<meta name="generator" content="Hexo 5.4.2"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">vue3学习
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="Created: 2023-03-27 20:49:40">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">Posted on</span>
+    <time itemprop="dateCreated datePublished" datetime="2023-03-27T20:49:40+08:00">2023-03-27</time>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="Toggle navigation bar">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">Yume Shoka</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gipetv6p75j20zk0m8x6p.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gipeuibk9fj20zk0m8ay2.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giclfb3vzhj20zk0m8wny.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gipeuv80yoj20zk0m8kjl.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giciub8ja1j20zk0m81ky.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giciundwu5j20zk0m8n9e.jpg"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">Home</a></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="en">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2023/03/27/vue3%E5%AD%A6%E4%B9%A0/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar.jpg">
+    <meta itemprop="name" content="John Doe">
+    <meta itemprop="description" content=", ">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Hexo">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <h1 id="vue3快速上手"><a class="markdownIt-Anchor" href="#vue3快速上手">#</a> Vue3 快速上手</h1>
+<h2 id="1-vue3带来了什么"><a class="markdownIt-Anchor" href="#1-vue3带来了什么">#</a> 1. Vue3 带来了什么</h2>
+<h3 id="11-性能的提升"><a class="markdownIt-Anchor" href="#11-性能的提升">#</a> 1.1 性能的提升</h3>
+<ul>
+<li>
+<p>打包大小减少 41%</p>
+</li>
+<li>
+<p>初次渲染快 55%，更新渲染快 133%</p>
+</li>
+<li>
+<p>内存减少 54%</p>
+<p>…</p>
+</li>
+</ul>
+<h3 id="12-源码的升级"><a class="markdownIt-Anchor" href="#12-源码的升级">#</a> 1.2 源码的升级</h3>
+<ul>
+<li>
+<p>使用 proxy 代替 defineProperty 实现响应式</p>
+</li>
+<li>
+<p>重写虚拟 DOM 的实现和 Tree-Shaking</p>
+<p>…</p>
+</li>
+</ul>
+<h3 id="13-拥抱typescript"><a class="markdownIt-Anchor" href="#13-拥抱typescript">#</a> 1.3 拥抱 TypeScript</h3>
+<ul>
+<li>vue3 可以更好的支持 TypeScript</li>
+</ul>
+<h3 id="14-新的特性"><a class="markdownIt-Anchor" href="#14-新的特性">#</a> 1.4 新的特性</h3>
+<ol>
+<li>
+<p>Composition API（组合 API）</p>
+<ul>
+<li>
+<p>setup 配置</p>
+</li>
+<li>
+<p>ref 和 reactive</p>
+</li>
+<li>
+<p>watch 与 watchEffect</p>
+</li>
+<li>
+<p>provide 与 inject</p>
+<p>…</p>
+</li>
+</ul>
+</li>
+</ol>
+<h1 id="一-创建vue30工程"><a class="markdownIt-Anchor" href="#一-创建vue30工程">#</a> 一、 创建 Vue3.0 工程</h1>
+<h2 id="1-使用vue-cli创建"><a class="markdownIt-Anchor" href="#1-使用vue-cli创建">#</a> 1. 使用 vue-cli 创建</h2>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//查看@vue/cli版本，确保@vue/cli版本在4.5.0以上</span></span><br><span class="line">vue --version</span><br><span class="line"><span class="comment">//安装或升级你的@vue/cli</span></span><br><span class="line">npm install -g @vue/cli</span><br><span class="line"><span class="comment">//创建</span></span><br><span class="line">vue create vue_test</span><br><span class="line"><span class="comment">//启动</span></span><br><span class="line">cd vue_test</span><br><span class="line">npm run serve</span><br></pre></td></tr></table></figure>
+<h2 id="2-使用vite创建"><a class="markdownIt-Anchor" href="#2-使用vite创建">#</a> 2. 使用 vite 创建</h2>
+<ul>
+<li>
+<p>什么是 vite? ___新一代前端构建工具</p>
+</li>
+<li>
+<p>优势如下：</p>
+<ul>
+<li>
+<p>开发坏境中，无需打包操作，可快速的冷启动</p>
+</li>
+<li>
+<p>轻量快速的热重载 (HMR)</p>
+</li>
+<li>
+<p>按需编译，不再等待整个应用编译完成</p>
+</li>
+</ul>
+</li>
+<li>
+<p>传统构建和 vite 构建对比图</p>
+<p><img data-src="vue3%E5%AD%A6%E4%B9%A0/image-20230327212107615.png" alt="image-20230327212107615"></p>
+</li>
+</ul>
+ <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//创建工程</span></span><br><span class="line">npm init vite-app &lt;project-name&gt;</span><br><span class="line"><span class="comment">//进入工程目录</span></span><br><span class="line">cd &lt;project-name&gt;</span><br><span class="line"><span class="comment">//安装依赖</span></span><br><span class="line">npm install</span><br><span class="line"><span class="comment">//运行</span></span><br><span class="line">npm run dev</span><br></pre></td></tr></table></figure>
+<h1 id="二-常用composition-api"><a class="markdownIt-Anchor" href="#二-常用composition-api">#</a> 二、 常用 Composition API</h1>
+<h2 id="1-拉开序幕的setup"><a class="markdownIt-Anchor" href="#1-拉开序幕的setup">#</a> 1. 拉开序幕的 setup</h2>
+<ol>
+<li>理解：VUe3.0 中一个新的配置项，值为一个函数</li>
+<li>setup 是所有 Composition API (组合 API)“表演舞台”</li>
+<li>组件中所用到的：数据、方法等等，均配置在 setup 中</li>
+<li>setup 函数的两种返回值：
+<ul>
+<li>若返回一个对象，则对象中属性、方法，在模板中均可以直接使用</li>
+<li>若返回一个渲染函数；则可以自定义渲染内容</li>
+</ul>
+</li>
+<li><strong>注意点：</strong>
+<ol>
+<li>尽量不要与 Vue2.x 配置混合使用
+<ul>
+<li>Vue2.x 配置（data,methods,computed…）中可以访问到 setup 中的属性、方法</li>
+<li>但在 setup 中不能访问到 Vue2.0x 配置（data,methods,computed…）</li>
+<li>如果有重名，setup 优先</li>
+</ul>
+</li>
+<li>setup 不能是一个 async 函数，因为返回值不再是 return 的对象，而是 promise, 模板看不到 return 对象中的属性</li>
+</ol>
+</li>
+</ol>
+<h2 id="2-ref函数"><a class="markdownIt-Anchor" href="#2-ref函数">#</a> 2.  ref 函数</h2>
+<ol>
+<li>
+<p>作用：定义一个响应式的数据</p>
+</li>
+<li>
+<p>语法：const xxx = ref (initValue)</p>
+<ul>
+<li>
+<p>创建一个包含响应式数据的引用对象 (reference 对象)</p>
+</li>
+<li>
+<p>JS 操作数据：xxx.value</p>
+</li>
+<li>
+<p>模板中读取数据：不需要.value，直接：</p>
+</li>
+</ul>
+</li>
+<li>
+<p>备注：</p>
+<ul>
+<li>
+<p>接收数据可以是：基本类型、也可以是对象类型</p>
+</li>
+<li>
+<p>基本类型的数据：响应式依然是靠 Object.defineProperty () 的 get () 和 set () 完成的</p>
+</li>
+<li>
+<p>对象类型的数据：内部 “求助” 了 Vue3.0 中的一个函数 ——reactive 函数</p>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="3-reactive-函数"><a class="markdownIt-Anchor" href="#3-reactive-函数">#</a> 3. reactive 函数</h2>
+<ul>
+<li>作用：定义一个对象类型的响应式数据（基本类型不要用它，要用 <code>ref</code>  函数）</li>
+<li>语法： <code>const 代理对象 = reactive(源对象)</code>  接收一个对象（或数组），返回一个代理对象（proxy 对象）</li>
+<li>reactive 定义的响应式数据是 “深层次的”</li>
+<li>内部基于 ES6 的 proxy 实现，通过代理对象操作对象内部数据进行操作</li>
+</ul>
+<h2 id="4-vue30的响应式原理"><a class="markdownIt-Anchor" href="#4-vue30的响应式原理">#</a> 4. Vue3.0 的响应式原理</h2>
+<h3 id="41-vue2x的响应式"><a class="markdownIt-Anchor" href="#41-vue2x的响应式">#</a> 4.1 vue2.x 的响应式</h3>
+<ul>
+<li>
+<p>实现原理：</p>
+<ul>
+<li>
+<p>对象类型：通过 Object.defineProperty () 对属性的读取和修改进行拦截（数据劫持）</p>
+</li>
+<li>
+<p>数组类型：通过重写更新数组的一系列方法来实现拦截。（对数组的变更方法进行了包裹）</p>
+</li>
+<li>
+<figure class="highlight js"><figcaption data-lang="JavaScript"></figcaption><table><tr><td data-num="1"></td><td><pre>Object<span class="token punctuation">.</span><span class="token function">definrProperty</span><span class="token punctuation">(</span>data<span class="token punctuation">,</span><span class="token string">'count'</span><span class="token punctuation">,</span><span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="2"></td><td><pre>	<span class="token function">get</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span><span class="token punctuation">,</span></pre></td></tr><tr><td data-num="3"></td><td><pre>	<span class="token function">set</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="4"></td><td><pre><span class="token punctuation">&#125;</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="5"></td><td><pre><span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span>code￼<span class="token number">2</span><span class="token operator">--</span><span class="token operator">></span></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+<h2 id="5reactive对比ref"><a class="markdownIt-Anchor" href="#5reactive对比ref">#</a> 5.reactive 对比 ref</h2>
+<ol>
+<li>从定义数据角度对比：
+<ul>
+<li>ref 用来定义：<strong>基本类型数据</strong></li>
+<li>reactive 用来定义：<strong>对象（或数组) 类型</strong></li>
+<li>注意：ref 可以用来定义对象（或数组）类型数据，它内部会自动通过 reactive 转化为代理对象</li>
+</ul>
+</li>
+<li>从原理角度对比：
+<ul>
+<li>ref 通过 <code>Object.definProperty()的get和set来实现响应式（数据劫持）</code> 。</li>
+<li>reactive 通过使用 Proxy 来实现响应式（数据劫持），并通过 Reflect 操作源对象内部的数据</li>
+</ul>
+</li>
+<li>从使用角度对比：
+<ul>
+<li>ref 定义的数据：操作数据需要 <code>.value</code> , 读取数据时模板那种直接读取不需要 <code>.value</code></li>
+<li>reactive 定义的数据：操作数据与读取数据；均不需要 <code>.value</code></li>
+</ul>
+</li>
+</ol>
+<h2 id="6-setup的两个注意点"><a class="markdownIt-Anchor" href="#6-setup的两个注意点">#</a> 6. setup 的两个注意点</h2>
+<ul>
+<li>
+<p>setup 执行时机</p>
+<ul>
+<li>在 beforeCreate 之前执行一次，this 是 <code>undefine</code></li>
+</ul>
+</li>
+<li>
+<p>setup 的参数</p>
+<ul>
+<li>
+<p>props：值为对象，包含：组件外部传递过来，且组件内部声明接收了属性</p>
+</li>
+<li>
+<p>context: 上下文对象</p>
+<p>attrs: 值为对象，包含：组件外部传递，但没有在 props 配置中声明的属性，相当于 <code>this.$attrs</code></p>
+<p>slots: 收到的插槽内容，相当于 <code>this.$slots</code></p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="7-计算属性与监视"><a class="markdownIt-Anchor" href="#7-计算属性与监视">#</a> 7. 计算属性与监视</h2>
+<h3 id="71-computed函数"><a class="markdownIt-Anchor" href="#71-computed函数">#</a> 7.1 computed 函数</h3>
+<ul>
+<li>
+<p>与 vue2.x 中的 computed 配置功能一样</p>
+</li>
+<li>
+<p>写法：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">import &#123;computed&#125; from &#x27;vue&#x27;</span><br><span class="line"></span><br><span class="line">setup()&#123;</span><br><span class="line"></span><br><span class="line">.....</span><br><span class="line">//计算属性（简写）</span><br><span class="line">	let fullName = computed(()=&gt;&#123;</span><br><span class="line">		return person.firstName + &#x27;-&#x27; + person.lastName</span><br><span class="line">	&#125;)</span><br><span class="line">	//计算属性-完整</span><br><span class="line">	let funllName = computed(&#123;</span><br><span class="line">		get()&#123;</span><br><span class="line">		return person.firstName + &#x27;-&#x27; + person.lastName</span><br><span class="line">		&#125;,</span><br><span class="line">		set(value)&#123;</span><br><span class="line">			const nameArr = value.split(&#x27;-&#x27;)</span><br><span class="line">			person.firstName = nameArr[0]</span><br><span class="line">			person.lastName = nameArr[1]</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">Edited on</span>
+    <time title="Modified: 2023-03-28 22:18:26" itemprop="dateModified" datetime="2023-03-28T22:18:26+08:00">2023-03-28</time>
+  </span>
+</div>
+
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> Donate</button>
+  <p>Give me a cup of [coffee]~(￣▽￣)~*</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="/images/wechatpay.png" alt="John Doe WeChat Pay">
+        <p>WeChat Pay</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/alipay.png" alt="John Doe Alipay">
+        <p>Alipay</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/paypal.png" alt="John Doe PayPal">
+        <p>PayPal</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>Post author:  </strong>John Doe <i class="ic i-at"><em>@</em></i>Hexo
+  </li>
+  <li class="link">
+    <strong>Post link: </strong>
+    <a href="http://example.com/2023/03/27/vue3%E5%AD%A6%E4%B9%A0/" title="vue3学习">http://example.com/2023/03/27/vue3学习/</a>
+  </li>
+  <li class="license">
+    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> unless stating additionally.
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/2023/03/25/webpack%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gipexe4oykj20zk0m87ji.jpg" title="webpack学习笔记">
+  <span class="type">Previous Post</span>
+  <span class="category"><i class="ic i-flag"></i> </span>
+  <h3>webpack学习笔记</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+      
+
+  <a href="/2023/03/31/Vue%E7%94%A8axios%E6%97%B6%E6%8A%A5%E9%94%99%EF%BC%9AUncaught-in-promise-TypeError-Cannot-read-properties-of-undefined-reading-%E2%80%98protocol%E2%80%98/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giclil3m4ej20zk0m8tn8.jpg" title="Vue用axios时报错：Uncaught(in promise)TypeError: Cannot read properties of undefined (reading ‘protocol‘)">
+  <span class="type">Next Post</span>
+  <span class="category"><i class="ic i-flag"></i> </span>
+  <h3>Vue用axios时报错：Uncaught(in promise)TypeError: Cannot read properties of undefined (reading ‘protocol‘)</h3>
+  </a>
+
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="Contents">
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#vue3%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B"><span class="toc-number">1.</span> <span class="toc-text"> Vue3 快速上手</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-vue3%E5%B8%A6%E6%9D%A5%E4%BA%86%E4%BB%80%E4%B9%88"><span class="toc-number">1.1.</span> <span class="toc-text"> 1. Vue3 带来了什么</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#11-%E6%80%A7%E8%83%BD%E7%9A%84%E6%8F%90%E5%8D%87"><span class="toc-number">1.1.1.</span> <span class="toc-text"> 1.1 性能的提升</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#12-%E6%BA%90%E7%A0%81%E7%9A%84%E5%8D%87%E7%BA%A7"><span class="toc-number">1.1.2.</span> <span class="toc-text"> 1.2 源码的升级</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#13-%E6%8B%A5%E6%8A%B1typescript"><span class="toc-number">1.1.3.</span> <span class="toc-text"> 1.3 拥抱 TypeScript</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#14-%E6%96%B0%E7%9A%84%E7%89%B9%E6%80%A7"><span class="toc-number">1.1.4.</span> <span class="toc-text"> 1.4 新的特性</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%80-%E5%88%9B%E5%BB%BAvue30%E5%B7%A5%E7%A8%8B"><span class="toc-number">2.</span> <span class="toc-text"> 一、 创建 Vue3.0 工程</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E4%BD%BF%E7%94%A8vue-cli%E5%88%9B%E5%BB%BA"><span class="toc-number">2.1.</span> <span class="toc-text"> 1. 使用 vue-cli 创建</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E4%BD%BF%E7%94%A8vite%E5%88%9B%E5%BB%BA"><span class="toc-number">2.2.</span> <span class="toc-text"> 2. 使用 vite 创建</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%8C-%E5%B8%B8%E7%94%A8composition-api"><span class="toc-number">3.</span> <span class="toc-text"> 二、 常用 Composition API</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E6%8B%89%E5%BC%80%E5%BA%8F%E5%B9%95%E7%9A%84setup"><span class="toc-number">3.1.</span> <span class="toc-text"> 1. 拉开序幕的 setup</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-ref%E5%87%BD%E6%95%B0"><span class="toc-number">3.2.</span> <span class="toc-text"> 2.  ref 函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-reactive-%E5%87%BD%E6%95%B0"><span class="toc-number">3.3.</span> <span class="toc-text"> 3. reactive 函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-vue30%E7%9A%84%E5%93%8D%E5%BA%94%E5%BC%8F%E5%8E%9F%E7%90%86"><span class="toc-number">3.4.</span> <span class="toc-text"> 4. Vue3.0 的响应式原理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#41-vue2x%E7%9A%84%E5%93%8D%E5%BA%94%E5%BC%8F"><span class="toc-number">3.4.1.</span> <span class="toc-text"> 4.1 vue2.x 的响应式</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5reactive%E5%AF%B9%E6%AF%94ref"><span class="toc-number">3.5.</span> <span class="toc-text"> 5.reactive 对比 ref</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-setup%E7%9A%84%E4%B8%A4%E4%B8%AA%E6%B3%A8%E6%84%8F%E7%82%B9"><span class="toc-number">3.6.</span> <span class="toc-text"> 6. setup 的两个注意点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-%E8%AE%A1%E7%AE%97%E5%B1%9E%E6%80%A7%E4%B8%8E%E7%9B%91%E8%A7%86"><span class="toc-number">3.7.</span> <span class="toc-text"> 7. 计算属性与监视</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#71-computed%E5%87%BD%E6%95%B0"><span class="toc-number">3.7.1.</span> <span class="toc-text"> 7.1 computed 函数</span></a></li></ol></li></ol></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="Related">
+      </div>
+      <div class="overview panel" data-title="Overview">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="John Doe"
+      data-src="/images/avatar.jpg">
+  <p class="name" itemprop="name">John Doe</p>
+  <div class="description" itemprop="description"></div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">10</span>
+        <span class="name">posts</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>Home</a>
+  </li>
+
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+        <a href="/2023/03/25/webpack%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" rel="prev" title="Previous Post"><i class="ic i-chevron-left"></i></a>
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+        <a href="/2023/03/31/Vue%E7%94%A8axios%E6%97%B6%E6%8A%A5%E9%94%99%EF%BC%9AUncaught-in-promise-TypeError-Cannot-read-properties-of-undefined-reading-%E2%80%98protocol%E2%80%98/" rel="next" title="Next Post"><i class="ic i-chevron-right"></i></a>
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>Random Posts</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2023/03/16/Hexo%E5%9B%BE%E7%89%87%E6%8F%92%E5%85%A5%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BA%E9%97%AE%E9%A2%98/" title="Hexo图片插入无法显示问题">Hexo图片插入无法显示问题</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2023/03/31/Vue%E7%94%A8axios%E6%97%B6%E6%8A%A5%E9%94%99%EF%BC%9AUncaught-in-promise-TypeError-Cannot-read-properties-of-undefined-reading-%E2%80%98protocol%E2%80%98/" title="Vue用axios时报错：Uncaught(in promise)TypeError: Cannot read properties of undefined (reading ‘protocol‘)">Vue用axios时报错：Uncaught(in promise)TypeError: Cannot read properties of undefined (reading ‘protocol‘)</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2023/03/07/Vue%E6%A0%B8%E5%BF%83%E5%86%85%E5%AE%B9/" title="Vue核心内容">Vue核心内容</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2023/03/19/%E7%BB%84%E4%BB%B6%E4%B9%8B%E9%97%B4%E7%9A%84%E6%95%B0%E6%8D%AE%E9%80%9A%E4%BF%A1/" title="组件之间的数据通信">组件之间的数据通信</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2023/03/25/Vue%E6%8A%A5%E9%94%99%E2%80%9CError-in-mounted-hook-TypeError-Cannot-read-properties-of-null-reading-getAttribute/" title="Vue报错“Error in mounted hook TypeError Cannot read properties of null (reading &#39;getAttribute&#39;)">Vue报错“Error in mounted hook TypeError Cannot read properties of null (reading 'getAttribute')</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2023/03/27/vue3%E5%AD%A6%E4%B9%A0/" title="vue3学习">vue3学习</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2023/03/07/Vue-CLI%E5%88%9D%E5%A7%8B%E5%8C%96%E8%84%9A%E6%89%8B%E6%9E%B6/" title="Vue CLI初始化脚手架">Vue CLI初始化脚手架</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2023/03/25/webpack%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="webpack学习笔记">webpack学习笔记</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2023/03/16/Vue%E7%9A%84%E4%BB%8B%E7%BB%8D%E5%92%8C%E4%BD%BF%E7%94%A8/" title="Vue的介绍和使用">Vue的介绍和使用</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2023/03/16/hello-world/" title="Hello World">Hello World</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>Recent Comments</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2010 – 
+    <span itemprop="copyrightYear">2023</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">John Doe @ Yume Shoka</span>
+  </div>
+  <div class="powered-by">
+    Powered by <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: '2023/03/27/vue3学习/',
+    favicon: {
+      show: "（●´3｀●）Goooood",
+      hide: "(´Д｀)Booooom"
+    },
+    search : {
+      placeholder: "Search for Posts",
+      empty: "We didn't find any results for the search: ${query}",
+      stats: "${hits} results found in ${time} ms"
+    },
+    valine: true,fancybox: true,
+    copyright: 'Copied to clipboard successfully! <br> All articles in this blog are licensed under <i class="ic i-creative-commons"></i>BY-NC-SA.',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>
