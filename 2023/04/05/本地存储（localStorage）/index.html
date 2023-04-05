@@ -1,0 +1,486 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="Hexo" href="http://example.com/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="Hexo" href="http://example.com/atom.xml" />
+<link rel="alternate" type="application/json" title="Hexo" href="http://example.com/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+
+<link rel="canonical" href="http://example.com/2023/04/05/%E6%9C%AC%E5%9C%B0%E5%AD%98%E5%82%A8%EF%BC%88localStorage%EF%BC%89/">
+
+
+
+  <title>
+本地存储（localStorage） |
+Yume Shoka = Hexo</title>
+<meta name="generator" content="Hexo 5.4.2"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">本地存储（localStorage）
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="Created: 2023-04-05 16:36:28">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">Posted on</span>
+    <time itemprop="dateCreated datePublished" datetime="2023-04-05T16:36:28+08:00">2023-04-05</time>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="Toggle navigation bar">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">Yume Shoka</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gipex2cdtbj20zk0m8x6p.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gipetv6p75j20zk0m8x6p.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giclx6phq6j20zk0m8e36.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giclgrvbd6j20zk0m8qv5.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giclip4jbpj20zk0m87cv.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gicitcxhpij20zk0m8hdt.jpg"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">Home</a></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="en">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2023/04/05/%E6%9C%AC%E5%9C%B0%E5%AD%98%E5%82%A8%EF%BC%88localStorage%EF%BC%89/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar.jpg">
+    <meta itemprop="name" content="John Doe">
+    <meta itemprop="description" content=", ">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Hexo">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <h1 id="1-什么是localstorage"><a class="markdownIt-Anchor" href="#1-什么是localstorage">#</a> 1、什么是 localStorage</h1>
+<p>在 HTML5 中，新加入了一个 localStorage 特性，这个特性主要是用来作为本地存储来使用的，解决了 cookie 存储空间不足的问题 (cookie 中每条 cookie 的存储空间为 4k)，localStorage 中一般浏览器支持的是 5M 大小，这个在不同的浏览器中 localStorage 会有所不同。</p>
+<h1 id="2-localstorage的优势与局限"><a class="markdownIt-Anchor" href="#2-localstorage的优势与局限">#</a> 2、<strong>localStorage 的优势与局限</strong></h1>
+<h2 id="21-localstorage的优势"><a class="markdownIt-Anchor" href="#21-localstorage的优势">#</a> 2.1 <strong>localStorage 的优势</strong></h2>
+<ol>
+<li><span class="exturl" data-url="aHR0cHM6Ly9zby5jc2RuLm5ldC9zby9zZWFyY2g/cT1sb2NhbFN0b3JhZ2UmYW1wO3NwbT0xMDAxLjIxMDEuMzAwMS43MDIw">localStorage</span> 拓展了 cookie 的 4K 限制</li>
+<li>localStorage 会可以将第一次请求的数据直接存储到本地，这个相当于一个 5M 大小的针对于前端页面的数据库，相比于 cookie 可以节约带宽，但是这个却是只有在高版本的浏览器中才支持的</li>
+</ol>
+<h2 id="22-localstorage的局限"><a class="markdownIt-Anchor" href="#22-localstorage的局限">#</a> 2.2 <strong>localStorage 的局限</strong></h2>
+<ol>
+<li>浏览器的大小不统一，并且在 IE8 以上的 IE 版本才支持 localStorage 这个属性</li>
+<li>目前所有的浏览器中都会把 localStorage 的值类型限定为 string 类型，这个在对我们日常比较常见的 JSON 对象类型需要一些转换</li>
+<li>localStorage 在浏览器的隐私模式下面是不可读取的</li>
+<li>localStorage 本质上是对字符串的读取，如果存储内容多的话会消耗内存空间，会导致页面变卡</li>
+<li>localStorage 不能被爬虫抓取到</li>
+</ol>
+<p><strong>localStorage 与 sessionStorage 的唯一一点区别就是 localStorage 属于永久性存储，而 sessionStorage 属于当会话结束的时候，sessionStorage 中的键值对会被清空</strong></p>
+<h2 id="23-localstorage的几种方法"><a class="markdownIt-Anchor" href="#23-localstorage的几种方法">#</a> 2.3 <strong>localStorage</strong> 的几种方法:</h2>
+<ol>
+<li>localStorage.setItem (“key”,“value”): 存储名字为 key 的一个值 value，如果 key 存在，就更新 value</li>
+<li>localStorage.getItem (“key”)：获取名称为 key 的值，如果 key 不存在则返回 null</li>
+<li>localStorage.removeItem (“key”)：删除名称为 “key” 的信息，这个 key 所对应的 value 也会全部被删除</li>
+<li>localStorage.clear ()：清空 localStorage 中所有信息</li>
+<li>localStorage.key ()：键的索引</li>
+</ol>
+<h2 id="24-json"><a class="markdownIt-Anchor" href="#24-json">#</a> 2.4 *<em>JSON:</em></h2>
+<p><strong>JSON.stringify</strong> (); // 将 json 格式的数据（JavaScript 对象）转换成 JSON 格式的<span class="exturl" data-url="aHR0cHM6Ly9zby5jc2RuLm5ldC9zby9zZWFyY2g/cT0lRTUlQUQlOTclRTclQUMlQTYlRTQlQjglQjImYW1wO3NwbT0xMDAxLjIxMDEuMzAwMS43MDIw">字符串</span></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span>  data = &#123;<span class="attr">name</span>:<span class="string">&quot;john&quot;</span>&#125;;</span><br><span class="line"></span><br><span class="line">data = <span class="title class_">JSON</span>.<span class="title function_">stringify</span>(data);</span><br><span class="line"></span><br><span class="line"><span class="variable language_">localStorage</span>.<span class="title function_">setItem</span>(<span class="string">&quot;data1&quot;</span>,data);</span><br></pre></td></tr></table></figure>
+<img data-src="/2023/04/05/%E6%9C%AC%E5%9C%B0%E5%AD%98%E5%82%A8%EF%BC%88localStorage%EF%BC%89/img2.png" class title="This is an example image">
+<p><strong>JSON.parse()</strong>; // 将 JSON 格式的字符串转换成<span class="exturl" data-url="aHR0cHM6Ly9zby5jc2RuLm5ldC9zby9zZWFyY2g/cT1KU09OJUU1JUFGJUI5JUU4JUIxJUExJmFtcDtzcG09MTAwMS4yMTAxLjMwMDEuNzAyMA=="> JSON 对象</span>进行处理</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> str = <span class="variable language_">localStorage</span>.<span class="title function_">getItem</span>(<span class="string">&quot;data1&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> obj = <span class="title class_">JSON</span>.<span class="title function_">parse</span>(str);</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(obj);</span><br></pre></td></tr></table></figure>
+<img data-src="/2023/04/05/%E6%9C%AC%E5%9C%B0%E5%AD%98%E5%82%A8%EF%BC%88localStorage%EF%BC%89/img1.png" class title="This is an example image">
+
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">Edited on</span>
+    <time title="Modified: 2023-04-05 16:49:18" itemprop="dateModified" datetime="2023-04-05T16:49:18+08:00">2023-04-05</time>
+  </span>
+</div>
+
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> Donate</button>
+  <p>Give me a cup of [coffee]~(￣▽￣)~*</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="/images/wechatpay.png" alt="John Doe WeChat Pay">
+        <p>WeChat Pay</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/alipay.png" alt="John Doe Alipay">
+        <p>Alipay</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/paypal.png" alt="John Doe PayPal">
+        <p>PayPal</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>Post author:  </strong>John Doe <i class="ic i-at"><em>@</em></i>Hexo
+  </li>
+  <li class="link">
+    <strong>Post link: </strong>
+    <a href="http://example.com/2023/04/05/%E6%9C%AC%E5%9C%B0%E5%AD%98%E5%82%A8%EF%BC%88localStorage%EF%BC%89/" title="本地存储（localStorage）">http://example.com/2023/04/05/本地存储（localStorage）/</a>
+  </li>
+  <li class="license">
+    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> unless stating additionally.
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/2023/03/31/Vue%E7%94%A8axios%E6%97%B6%E6%8A%A5%E9%94%99%EF%BC%9AUncaught-in-promise-TypeError-Cannot-read-properties-of-undefined-reading-%E2%80%98protocol%E2%80%98/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gipetlbztpj20zk0m84qp.jpg" title="Vue用axios时报错：Uncaught(in promise)TypeError: Cannot read properties of undefined (reading ‘protocol‘)">
+  <span class="type">Previous Post</span>
+  <span class="category"><i class="ic i-flag"></i> </span>
+  <h3>Vue用axios时报错：Uncaught(in promise)TypeError: Cannot read properties of undefined (reading ‘protocol‘)</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="Contents">
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-%E4%BB%80%E4%B9%88%E6%98%AFlocalstorage"><span class="toc-number">1.</span> <span class="toc-text"> 1、什么是 localStorage</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-localstorage%E7%9A%84%E4%BC%98%E5%8A%BF%E4%B8%8E%E5%B1%80%E9%99%90"><span class="toc-number">2.</span> <span class="toc-text"> 2、localStorage 的优势与局限</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#21-localstorage%E7%9A%84%E4%BC%98%E5%8A%BF"><span class="toc-number">2.1.</span> <span class="toc-text"> 2.1 localStorage 的优势</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#22-localstorage%E7%9A%84%E5%B1%80%E9%99%90"><span class="toc-number">2.2.</span> <span class="toc-text"> 2.2 localStorage 的局限</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#23-localstorage%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E6%B3%95"><span class="toc-number">2.3.</span> <span class="toc-text"> 2.3 localStorage 的几种方法:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#24-json"><span class="toc-number">2.4.</span> <span class="toc-text"> 2.4 *JSON:</span></a></li></ol></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="Related">
+      </div>
+      <div class="overview panel" data-title="Overview">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="John Doe"
+      data-src="/images/avatar.jpg">
+  <p class="name" itemprop="name">John Doe</p>
+  <div class="description" itemprop="description"></div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">11</span>
+        <span class="name">posts</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>Home</a>
+  </li>
+
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>Random Posts</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2023/03/16/hello-world/" title="Hello World">Hello World</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2023/03/31/Vue%E7%94%A8axios%E6%97%B6%E6%8A%A5%E9%94%99%EF%BC%9AUncaught-in-promise-TypeError-Cannot-read-properties-of-undefined-reading-%E2%80%98protocol%E2%80%98/" title="Vue用axios时报错：Uncaught(in promise)TypeError: Cannot read properties of undefined (reading ‘protocol‘)">Vue用axios时报错：Uncaught(in promise)TypeError: Cannot read properties of undefined (reading ‘protocol‘)</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2023/03/07/Vue%E6%A0%B8%E5%BF%83%E5%86%85%E5%AE%B9/" title="Vue核心内容">Vue核心内容</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2023/03/25/Vue%E6%8A%A5%E9%94%99%E2%80%9CError-in-mounted-hook-TypeError-Cannot-read-properties-of-null-reading-getAttribute/" title="Vue报错“Error in mounted hook TypeError Cannot read properties of null (reading &#39;getAttribute&#39;)">Vue报错“Error in mounted hook TypeError Cannot read properties of null (reading 'getAttribute')</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2023/04/05/%E6%9C%AC%E5%9C%B0%E5%AD%98%E5%82%A8%EF%BC%88localStorage%EF%BC%89/" title="本地存储（localStorage）">本地存储（localStorage）</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2023/03/19/%E7%BB%84%E4%BB%B6%E4%B9%8B%E9%97%B4%E7%9A%84%E6%95%B0%E6%8D%AE%E9%80%9A%E4%BF%A1/" title="组件之间的数据通信">组件之间的数据通信</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2023/03/07/Vue-CLI%E5%88%9D%E5%A7%8B%E5%8C%96%E8%84%9A%E6%89%8B%E6%9E%B6/" title="Vue CLI初始化脚手架">Vue CLI初始化脚手架</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2023/03/16/Vue%E7%9A%84%E4%BB%8B%E7%BB%8D%E5%92%8C%E4%BD%BF%E7%94%A8/" title="Vue的介绍和使用">Vue的介绍和使用</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2023/03/16/Hexo%E5%9B%BE%E7%89%87%E6%8F%92%E5%85%A5%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BA%E9%97%AE%E9%A2%98/" title="Hexo图片插入无法显示问题">Hexo图片插入无法显示问题</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2023/03/25/webpack%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="webpack学习笔记">webpack学习笔记</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>Recent Comments</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2010 – 
+    <span itemprop="copyrightYear">2023</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">John Doe @ Yume Shoka</span>
+  </div>
+  <div class="powered-by">
+    Powered by <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: '2023/04/05/本地存储（localStorage）/',
+    favicon: {
+      show: "（●´3｀●）Goooood",
+      hide: "(´Д｀)Booooom"
+    },
+    search : {
+      placeholder: "Search for Posts",
+      empty: "We didn't find any results for the search: ${query}",
+      stats: "${hits} results found in ${time} ms"
+    },
+    valine: true,fancybox: true,
+    copyright: 'Copied to clipboard successfully! <br> All articles in this blog are licensed under <i class="ic i-creative-commons"></i>BY-NC-SA.',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>
